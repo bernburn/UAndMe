@@ -1,0 +1,25 @@
+:root{--ease-ui:cubic-bezier(.22,1,.36,1)}
+@keyframes page-arrive{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes card-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes backdrop-arrive{from{opacity:0}to{opacity:1}}
+@keyframes dialog-arrive{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes heart-tap{0%,100%{transform:scale(1)}45%{transform:scale(1.2)}}
+.page-transition{animation:page-arrive .32s var(--ease-ui)}
+.account,.login-intro,.login-card{animation:page-arrive .45s var(--ease-ui) both}
+.login-card{animation-delay:70ms}
+.hangout-grid>.hangout-tile,.social-post,.notification,.report-card{animation:card-arrive .36s var(--ease-ui) backwards}
+.hangout-grid>.hangout-tile:nth-child(2),.social-post:nth-of-type(2),.notification:nth-child(2){animation-delay:35ms}
+.hangout-grid>.hangout-tile:nth-child(3),.social-post:nth-of-type(3),.notification:nth-child(3){animation-delay:70ms}
+.hangout-grid>.hangout-tile:nth-child(4),.social-post:nth-of-type(4),.notification:nth-child(4){animation-delay:105ms}
+.overlay{animation:backdrop-arrive .18s ease-out}
+.overlay>.modal{animation:dialog-arrive .28s var(--ease-ui)}
+.comments,.campus-notice,.campus-alert,.explore-empty{animation:page-arrive .24s var(--ease-ui)}
+.campus-nav nav button,.explore-categories button,.primary,.quiet,.create-account-button,.inline-actions button,.icon-button,.post-actions button,.hangout-tile{transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .22s ease,transform .22s var(--ease-ui)}
+.primary:not(:disabled):active,.quiet:not(:disabled):active,.create-account-button:active,.campus-nav nav button:active,.explore-categories button:active{transform:scale(.97)}
+.hangout-tile:active{transform:translateY(-1px) scale(.99)}
+input,textarea,select{transition:border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
+.post-actions button[aria-pressed=true] svg{animation:heart-tap .3s var(--ease-ui)}
+.campus-main{scroll-margin-bottom:90px}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

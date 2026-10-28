@@ -1,0 +1,9 @@
+import {Bell} from 'lucide-react';
+import {supabase} from './supabase';
+import {usePagedList,PAGE_SIZE} from './usePagedList';
+type Note={id:string;message:string;hangout_id:string|null;read_at:string|null;created_at:string};
+export function PagedNotifications({onOpen,onRead,revision}:{onOpen:(id:string)=>void;onRead:(id:string)=>Promise<unknown>;revision:number}){
+ const list=usePagedList<Note>(String(revision),async offset=>{const {data,error}=await supabase!.from('notifications').select('*').order('created_at',{ascending:false}).order('id',{ascending:false}).range(offset,offset+PAGE_SIZE);if(error)throw error;return {rows:data.slice(0,PAGE_SIZE),more:data.length>PAGE_SIZE};});
+ return <div>{list.rows.map(n=><article className={'notification '+(!n.read_at?'unread':'')} key={n.id}><Bell size={20}/><div><p>{n.message}</p><small>{new Intl.DateTimeFormat('en-PH',{timeZone:'Asia/Manila',dateStyle:'medium',timeStyle:'short'}).format(new Date(n.created_at))}</small><div className="inline-actions">{n.hangout_id&&<button onClick={()=>onOpen(n.hangout_id!)}>View hangout</button>}{!n.read_at&&<button disabled={list.loading} onClick={async()=>{const ok=await onRead(n.id);if(ok!==false)list.update(previous=>previous.map(item=>item.id===n.id?{...item,read_at:new Date().toISOString()}:item));}}>Mark as read</button>}</div></div></article>)}{list.loading&&<p className="section-pad muted" role="status">Loading notifications…</p>}{list.error&&<p className="section-pad error" role="alert">{list.error}<button className="switch" onClick={()=>void list.next()}>Retry</button></p>}{!list.loading&&!list.error&&!list.rows.length&&<p className="section-pad muted">You’re all caught up.</p>}{list.more&&<button className="quiet list-more" disabled={list.loading} onClick={()=>void list.next()}>Load older notifications</button>}</div>;
+}
+

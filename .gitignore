@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*
+!.env.example
+*.tsbuildinfo
+# Local visual QA captures can contain student data.
+/*-preview.png
+/*-redesign.png
+/explore-modern.png
+/mobile-bottom-nav.png
+/feed-hangouts.png
+/profile-page.png

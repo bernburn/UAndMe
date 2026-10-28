@@ -1,0 +1,47 @@
+/* Muted UA palette: slate navy, antique gold and softer neutral surfaces. */
+:root{--navy:#263b57;--gold:#c5b276;--red:#94565a;--ink:#2c3747;--muted:#657184;--line:#dce0e5;background:#e9ecf0}
+body,body:has(.login-landing){background:#e9ecf0}
+.campus-main,.login-card,.modal{background:#f5f5f3;border-color:#dce0e5}
+.campus-top{background:#f5f5f3ed}
+.campus-nav nav button[aria-current=page]{background:#dce2e9}
+.campus-nav nav button:hover{background:#e0e5eb}
+.campus-nav nav button[aria-current=page]:before{border-color:#b6a575}
+.primary,.new-hangout{background:#354961;box-shadow:none}
+.primary:hover{background:#293d55}
+.campus-welcome{background:#2c3b50;border-radius:22px;color:#eceef1}
+.campus-welcome:before{background:#b5a376;height:3px}
+.campus-welcome:after{opacity:.025}
+.campus-welcome .eyebrow{color:#b1bdcc}
+.campus-welcome p{color:#b8c2cf}
+.campus-welcome button,.create-account-button{background:#c7b782;color:#29384b}
+.campus-welcome button:hover,.create-account-button:hover{background:#bca973}
+.right-section,.hangout-tile{background:#f3f4f3;border-color:#dce1e6}
+.hangout-tile:hover{background:#f7f7f5;border-color:#b7c0cc;box-shadow:0 7px 18px #25354c08}
+.explore-hero{background:#e7ebef;border-color:#d9dfe6}
+.explore-count{background:#f0f2f2;color:#59697c}
+.explore-categories button{background:#eef0f1;border-color:#d6dce3;color:#626e80}
+.explore-categories button[aria-pressed=true]{background:#3c4d64;border-color:#3c4d64}
+.social-post:hover{background:#f0f2f2}
+.social-composer{border-bottom-color:#e9ecef}
+.social-composer textarea{background:transparent}
+.avatar{background:#dde3e9;border-color:#d1d9e2;color:#3c4e65}
+.icon-button,.feed-tab>span,.clear-filters{background:#e8ecf0;border-color:#d8dfe6}
+input,textarea,select,.login-card input{background:#eff1f1;border-color:#d5dce3}
+.section-pad input,.section-pad select,.section-pad textarea{background:#eff1f1;border-color:#d5dce3}
+.campus-safety{background:#e5e9ed;border-color:#d8dfe5}
+.category-chip,.cat-Games{background:#e9e2ce;color:#756239}
+.cat-Study{background:#dfe5ed;color:#536581}.cat-Food{background:#eadddb;color:#845a58}
+.cat-Sports{background:#dfe8e0;color:#526b58}.cat-Casual{background:#e4dfeb;color:#6e617c}
+.cat-Other{background:#e0e5ea;color:#596b80}
+.tile-foot b{background:#e0e7df;color:#55694f}
+.explore-empty{background:#eef0f0;border-color:#cbd4dd}
+.explore-empty>svg{background:#dfe5eb;color:#6d7d90}
+.form-summary,.detail-modal .status-label,.inline-actions button,.request-row button,.blocked-row button{background:#e7ebef;border-color:#d5dde5}
+.notification.unread{background:#e8ecf1;border-color:#b6a575}
+.campus-notice{background:#e4e9ee}.verification-callout,.phase-note{background:#e9e7dc}
+.profile-cover{background:#34465e;border-bottom-color:#b9a878}
+.wordmark .wordmark-ua,.login-intro h1 .wordmark .wordmark-ua{color:#85764d}
+.verified-badge{background:#41536c;color:#ded3ae}
+.feed-tab:after{background:#b6a575}
+.login-card{border-top-color:#b6a575;box-shadow:0 16px 55px #28394e07}
+.login-values>span{background:#dfe5eb}

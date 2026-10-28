@@ -1,0 +1,11 @@
+.profile-page-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 26px;border-bottom:1px solid var(--line)}
+.profile-page-toolbar .quiet{padding:9px 14px;font-size:11px}
+.profile-page .profile-cover{margin-top:0}
+.profile-page h2{font-family:Manrope,sans-serif;font-size:25px;letter-spacing:-.7px;overflow-wrap:anywhere}
+.profile-page h3{font-size:15px;margin-top:30px;color:var(--navy)}
+.profile-bio{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font-size:14px}
+.profile-section-title{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 28px;font-size:13px;font-weight:700;color:var(--navy)}
+.profile-avatar-link{cursor:pointer;transition:background-color .2s ease}
+.profile-avatar-link:hover{background:#dce7f7}.profile-more{margin:20px 28px}
+.profile-mobile-signout{display:none}
+@media(max-width:760px){.profile-page-toolbar{padding:17px 16px}.profile-mobile-signout{display:flex}.profile-page h2{font-size:23px}.profile-section-title{padding:17px 16px}}

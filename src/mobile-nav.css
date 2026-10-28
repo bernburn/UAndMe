@@ -1,0 +1,33 @@
+/* Mobile navigation follows the thumb; desktop keeps the left rail. */
+:root{--gold:#ffda00}
+.campus-welcome button,.create-account-button{background:#ffda00}
+.campus-welcome:before,.feed-tab:after{background:#ffda00}
+.campus-nav nav button[aria-current=page]:before{border-color:#ffda00}
+.category-chip,.cat-Games{background:#fff3ad;color:#725900}
+.profile-cover{border-bottom-color:#ffda00}
+.login-card{border-top-color:#ffda00}
+@media(max-width:760px){
+ .campus-shell{display:block;padding:10px 10px calc(88px + env(safe-area-inset-bottom,0px));min-height:100dvh}
+ .campus-main{width:100%;min-height:calc(100dvh - 108px);border-radius:19px}
+ .campus-nav{position:fixed;inset:auto 0 0;z-index:8;display:block;width:100%;height:auto;padding:7px 10px calc(7px + env(safe-area-inset-bottom,0px));background:#fffffff5;border-top:1px solid #e2e8f2;box-shadow:0 -5px 24px #08285d08;backdrop-filter:blur(16px)}
+ .campus-nav>.campus-brand,.campus-nav>.campus-wordmark,.campus-nav>.new-hangout,.campus-nav>.campus-signout,.campus-nav>.nav-student{display:none}
+ .campus-nav nav{display:flex;flex-direction:row;justify-content:space-around;align-items:stretch;gap:3px;margin:0;width:100%}
+ .campus-nav nav button{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;flex:1;min-width:0;min-height:55px;padding:8px 3px;border-radius:12px;color:#728097}
+ .campus-nav nav button>span{display:block;font-size:9px;font-weight:600;line-height:1.1;max-width:100%;white-space:nowrap;letter-spacing:-.15px}
+ .campus-nav nav button svg{width:21px;height:21px;flex-shrink:0}
+ .campus-nav nav button[aria-current=page]{background:#edf2fc;color:#08285d}
+ .campus-nav nav button[aria-current=page]:before{left:calc(50% - 12px);top:0;width:24px;height:3px;border:0;background:#ffda00;border-radius:0 0 4px 4px}
+ .campus-nav .unread-dot{position:absolute;top:5px;right:calc(50% - 15px);width:6px;height:6px;border:1px solid white}
+ .campus-top{top:0;padding:19px 20px}
+ .mobile-account-actions{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:12px}
+ .mobile-account-actions .wordmark{font-size:23px}.mobile-account-actions button{font-size:11px;padding:9px 15px}
+ .overlay{z-index:12}
+}
+@media(min-width:761px){.mobile-account-actions{display:none}}
+
+.wordmark .wordmark-ua,.login-intro h1 .wordmark .wordmark-ua{color:#f5c900}
+.wordmark .wordmark-ua .wordmark-a{color:#c51f30}
+
+
+
+

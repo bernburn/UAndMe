@@ -1,0 +1,7 @@
+.new-updates-button{display:block;width:100%;background:#eef3fc;border:0;border-bottom:1px solid #dde6f3;color:var(--navy);font:inherit;font-size:12px;font-weight:600;padding:16px;cursor:pointer}.new-updates-button:hover{background:#e3ecfb}.pull-refresh{display:flex;justify-content:center;align-items:center;gap:9px;overflow:hidden;color:#6c7d95;font-size:11px;background:#f8faff}.pull-refresh svg{flex-shrink:0}@media(max-width:760px){body:has(.campus-shell){overscroll-behavior-y:contain}}
+.pull-refresh{transition:height .28s cubic-bezier(.22,1,.36,1),opacity .2s ease;will-change:height}
+.pull-refresh.is-pulling{transition:opacity .15s ease}
+.pull-refresh-icon{transform-origin:center;transition:transform .12s ease-out}
+.pull-refresh.is-refreshing .pull-refresh-icon{animation:pull-refresh-spin .8s linear infinite;transition:none}
+@keyframes pull-refresh-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pull-refresh,.pull-refresh-icon{transition:none!important}.pull-refresh.is-refreshing .pull-refresh-icon{animation:none!important}}
